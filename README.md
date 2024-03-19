@@ -1,3 +1,11 @@
+# Original Scraping Functionality (main headline)
+
+The original script retrieves the main headline from the homepage of The Daily Pennsylvanian. It does this by sending an HTTP GET request to the homepage, parsing the received HTML content using BeautifulSoup to locate an <a> element with a specific class (frontpage-link), and extracting the text content of this element, which is considered the main headline. 
+
+# My New Scraping Functionality (Academic Section)
+
+In addition to the main headline, the script also fetches the title of the first article listed under the "Academics" section of the website. This is accomplished by sending an HTTP GET request to the "Academics" section's URL, parsing the HTML to find the first <h3> element with the class standard-link, and extracting the text of the first <a> element within this <h3> element, which is the title of the article. This is stored in its own JSON file which is updated regularly to gather new top article titles in the academic section.
+
 # Basic Git Scraper Template
 
 This template provides a starting point for **git scraping**—the technique of scraping data from websites and automatically committing it to a Git repository using workflows, [coined by Simon Willison](https://simonwillison.net/2020/Oct/9/git-scraping/).
